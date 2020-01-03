@@ -12,7 +12,7 @@ steps:
     java-version: '12.x'
 - uses: subosito/flutter-action@v1
   with:
-    flutter-version: '1.7.8+hotfix.4'
+    flutter-version: '1.9.1+hotfix.6'
 - run: flutter pub get
 - run: flutter test
 - run: flutter build apk
@@ -44,7 +44,7 @@ steps:
     java-version: '12.x'
 - uses: subosito/flutter-action@v1
   with:
-    flutter-version: '1.7.x' # you can use 1.7
+    flutter-version: '1.12.x' # you can use 1.12
     channel: 'dev' # optional, default to: 'stable'
 - run: flutter pub get
 - run: flutter test
@@ -68,11 +68,16 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
         with:
-          flutter-version: '1.7.8+hotfix.4'
+          flutter-version: '1.11.0'
           channel: 'beta'
       - run: flutter pub get
       - run: flutter test
       - run: flutter build apk
 ```
 
-For a step by step guide on implementation read the tutorial on [Medium](https://medium.com/better-programming/ci-cd-for-flutter-apps-using-github-actions-b833f8f7aac)
+## Articles
+
+- [Continuous Integration for Flutter with GitHub Actions](https://admcpr.com/continuous-integration-for-flutter-with-github-actions/)
+- [CI/CD for Flutter Apps Using GitHub Actions](https://medium.com/better-programming/ci-cd-for-flutter-apps-using-github-actions-b833f8f7aac)
+- [Guard your open-sourced Flutter app with GitHub Actions](https://medium.com/@jacksonz666/guard-your-open-sourced-flutter-app-with-github-actions-824cc4d9844)
+- [Run Flutter Driver tests on GitHub Actions](https://medium.com/flutter-community/run-flutter-driver-tests-on-github-actions-13c639c7e4ab)
